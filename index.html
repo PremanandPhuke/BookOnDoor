@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookOnDoor</title>
+
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+
+
+
+    <link rel="icon" type="image/png" href="img/flavicon2.jpg">
+
+
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lora&family=Merriweather:wght@900&family=Moon+Dance&family=Readex+Pro:wght@300&family=Roboto:wght@300;400&family=The+Nautigal:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lora&family=Merriweather:wght@900&family=Moon+Dance&family=Readex+Pro:wght@300&family=Roboto+Slab:wght@500&family=Roboto:wght@300;400&family=The+Nautigal:wght@700&display=swap');
+
+        * {
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        .pages .navbar-brand {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .popular h1 {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .requestforbook h1 {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .other .FAQ h1 {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .other .connect h1 {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .other .links h1 {
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        nav {
+            width: 100%;
+            background-color: none;
+        }
+
+        nav .navbar-brand {
+            color: white;
+            font-size: 40px;
+            font-weight: 500;
+        }
+
+        nav a {
+            color: white;
+        }
+
+        .offerimg {
+            padding-left: 25%;
+        }
+
+        .offer {
+            color: white;
+            padding-top: 20%;
+
+        }
+
+        .offers p {
+            color: white;
+        }
+
+        .offers .zero {
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .offer .pt1 {
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .offer .pt2 {
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .popular .card i {
+            border-radius: 100px;
+           
+
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid black;
+            color: black;
+            font-size: 19px;
+            cursor: pointer;
+        }
+
+        .popular .card .stars i {
+            color: #FDCC0D;
+            border: hidden;
+            height: 50px;
+            width: 20px;
+
+        }
+
+        .popular .card .fa-heart {
+            color: #e31b23;
+            transition: 0.2s;
+        }
+
+        .popular .card .fa-heart:hover {
+            color: white;
+            background-color: #e31b23;
+        }
+
+        .popular .card .fa-shopping-cart {
+            color: rgb(240, 197, 56);
+            transition: 0.2s;
+        }
+
+        .popular .card .fa-shopping-cart:hover {
+            color: white;
+            background-color: rgb(240, 197, 56);
+        }
+
+        .requestforbook h6 {
+            color: white;
+        }
+
+        .requestforbook p {
+            color: white;
+        }
+
+        .social i {
+            /* color: white;
+            border: 0.2px solid white;
+            border-radius: 10px;
+            height: 50px;
+            width: 50px;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px; */
+
+
+            border-radius: 100px;
+            /* border: 0.5px solid black; */
+
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            /* border: 1px solid black; */
+            color: black;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+
+        .social .fa-facebook-f {
+            border: hidden;
+            background-color: white;
+            color: black;
+            transition: 0.2s;
+            -webkit-box-shadow: 0px 0px 20px rgb(68, 68, 247);
+            -moz-box-shadow: 0px 0px 20px rgb(68, 68, 247);
+            box-shadow: 0px 0px 20px rgb(68, 68, 247);
+        }
+
+        .social .fa-facebook-f:hover {
+            background-color: rgb(68, 68, 247);
+            font-size: 30px;
+            color: white;
+
+        }
+
+
+        .social .fa-twitter {
+            border: hidden;
+            background-color: white;
+            color: black;
+            transition: 0.2s;
+            -webkit-box-shadow: 0px 0px 20px rgb(113, 190, 241);
+            -moz-box-shadow: 0px 0px 20px rgb(113, 190, 241);
+            box-shadow: 0px 0px 20px rgb(113, 190, 241);
+        }
+
+        .social .fa-twitter:hover {
+            background-color: rgb(113, 190, 241);
+            font-size: 30px;
+            color: white;
+
+        }
+
+
+
+
+        .social .fa-instagram {
+            border: hidden;
+            background-color: white;
+            color: black;
+            transition: 0.2s;
+            -webkit-box-shadow: 0px 0px 20px rgb(182, 63, 83);
+            -moz-box-shadow: 0px 0px 20px rgb(182, 63, 83);
+            box-shadow: 0px 0px 20px rgb(182, 63, 83);
+
+
+
+        }
+
+        .social .fa-instagram:hover {
+            font-size: 30px;
+            background-color: rgb(182, 63, 83);
+            color: white;
+        }
+
+        .social .fa-youtube {
+            border: hidden;
+            background-color: white;
+            color: black;
+            transition: 0.2s;
+            -webkit-box-shadow: 0px 0px 20px rgb(230, 36, 36);
+            -moz-box-shadow: 0px 0px 20px rgb(230, 36, 36);
+            box-shadow: 0px 0px 20px rgb(230, 36, 36);
+        }
+
+        .social .fa-youtube:hover {
+            font-size: 30px;
+
+            color: white;
+            background-color: rgb(230, 36, 36);
+        }
+
+
+        .other .links a {
+            color: white;
+            transition: 0.5s;
+
+
+        }
+
+        .other .links a:hover {
+            color: brown;
+            margin-top: -10%;
+        }
+
+
+
+        .other .FAQ input {
+            background-color: transparent;
+            border: hidden;
+            border-bottom: 1px solid white;
+            width: 50%;
+            color: white;
+        }
+
+        .other .FAQ button {
+            background-color: transparent;
+            border: 00.5px solid palevioletred;
+            color: white;
+
+        }
+
+        .other .FAQ button:hover {
+            -webkit-box-shadow: 0px 0px 20px palevioletred;
+            -moz-box-shadow: 0px 0px 20px palevioletred;
+            box-shadow: 0px 0px 20px palevioletred;
+        }
+
+
+        .popular .more button {
+            background-color: transparent;
+            border: 00.5px solid palevioletred;
+            color: white;
+        }
+
+        .popular .more button:hover {
+            -webkit-box-shadow: 0px 0px 20px palevioletred;
+            -moz-box-shadow: 0px 0px 20px palevioletred;
+            box-shadow: 0px 0px 20px palevioletred;
+        }
+
+
+        .mr-auto {
+            margin-left: 20%;
+        }
+
+        .mr-auto button {
+            background-color: transparent;
+            color: white;
+            border: hidden;
+            transition: 0.2s;
+        }
+
+        .mr-auto button:hover {
+            background-color: transparent;
+            color: gray;
+            border: hidden;
+
+        }
+
+        .collapse .signin button {
+            background-color: transparent;
+            border: hidden;
+            color: white;
+
+
+        }
+
+        .collapse .signin button:hover {
+            color: brown;
+        }
+
+        .collapse .dropdown a:hover {
+            color: brown;
+        }
+
+        .collapse .dropdown-toggle {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+            border: hidden;
+        }
+
+        .collapse .dropdown-toggle:hover {
+            color: brown;
+        }
+
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+
+            background: url("data:image/jpeg;base64,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");
+
+        }
+
+        .navbar .navbar-toggler span {
+            color: white;
+        }
+
+        .navbar .navbar-toggler span:hover {
+            color: brown;
+        }
+
+
+        .attop {
+            font-size: 25px;
+            color: yellowgreen;
+            cursor: pointer;
+
+        }
+    </style>
+
+</head>
+
+<body
+    background="data:image/jpeg;base64,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">
+    <div class="container-fluid pages" id="pages">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar bg">
+                <a class="navbar-brand" href="#">BookOnDoor</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span><i class="fas fa-arrow-down"></i></span>
+                </button>
+
+                <div class="collapse navbar-collapse   " id="navbarSupportedContent" align="center">
+                    <ul class="navbar-nav mr-auto">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search for Book"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                    class="fa fa-search"></i></button>
+                        </form>
+
+
+                    </ul>
+
+                    <a class="signin" href="Sign  In.html" target="_blank"><button class="btn ">Sign in OR New Account</button></a>
+
+                    <div class="dropdown">
+                        <img id="pr" style="height: 25px; width: 25px;" src="img/india.png" alt="Country">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Country
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a onclick="btn()" class="dropdown-item" href="#">India</a>
+                            <a onclick="btn1()" class="dropdown-item" href="#">USA</a>
+                            <a onclick="btn2()" class="dropdown-item" href="#">UAE</a>
+                            <a onclick="btn3()" class="dropdown-item" href="#">Canada</a>
+
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Language
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">ENGLISH</a>
+                            <a class="dropdown-item" href="#">HINDI</a>
+                            <a class="dropdown-item" href="#">MARATHI</a>
+                            <a class="dropdown-item" href="#">TAMIL</a>
+                            <a class="dropdown-item" href="#">TELUGU</a>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </nav>
+        </div>
+
+
+    </div>
+    <br><br>
+
+    <br><br><br>
+    <div class="container  offers">
+        <div class="row">
+
+            <div class="col ">
+                <img class="offerimg" src="img/Untitled-2.png" alt="">
+            </div>
+
+            <div class="col">
+                <h2 class="offer"> <b class="pt1">BOOK</b> YOU NEED <br> AT <br> <b class="pt2">PRICE</b> WHICH YOU WANT
+                </h2> <br>
+                <p>We have thousands of book at perfect prizes with <b class="zero">Rs. 0 </b> dilivery charges and also
+                    have some excited and LIMITED offers </p><br>
+                <p><i>BY TAKING PREMIUM YOU CAN JUST DOWNLODE PDF OF ANY BOOK</i></p>
+
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+
+    <div class="popular">
+        <div class="container">
+            <div class="row " align="center">
+                <div class="col">
+                    <h1 style="color: white;">POPULAR THROGHOUT THE WORLD</h1>
+
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="row"  align="center">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/book1.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">LIFE'S AMAZING SECRETS</h5>
+                            <p class="card-text">How to Find Balance and Purpose in Your Life | Inspirational Zen book
+                                on motivation, self-development & healthy living <br> by <a
+                                    href="https://en.wikipedia.org/wiki/Gaur_Gopal_Das" target="_blank">Guru Gopal
+                                    Das</a></p>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star"></i>
+
+                            </div>
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 141.00 </b>
+                                <h style="text-decoration: line-through;">Rs.250.00 </h> <b
+                                    style="color: orangered;">(44% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img height="" src="img/book2.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">BHAGAVAD GITA</h5>
+                            <p class="card-text">How to Find Balance and Purpose in Your Life | Inspirational Zen book
+                                on motivation. <br> by <a
+                                    href="https://en.wikipedia.org/wiki/A._C._Bhaktivedanta_Swami_Prabhupada"
+                                    target="_blank">A. C. Bhaktivedanta Swami Prabhupad </a></p>
+
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+
+                            </div>
+
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 210.00 </b>
+                                <h style="text-decoration: line-through;">Rs.500.00</h>
+                                <b style="color: orangered;">(58% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/book3.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">THE POWER OF YOUR SUBCONCIOUS MIND</h5>
+                            <p class="card-text"> <br> by <a href="https://en.wikipedia.org/wiki/Joseph_Murphy_(author)"
+                                    target="_blank"> Dr. Joseph Murphy </a></p><br><br>
+
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star"></i>
+
+                            </div>
+
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 279.00 </b>
+                                <h style="text-decoration: line-through;">Rs.499.00</h>
+                                <b style="color: orangered;">(44% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/book4.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">ONE ARRANGED MURDER</h5>
+                            <p class="card-text">How to Find Balance and Purpose in Your Life | Inspirational Zen book
+                                on motivation, self-development & healthy living <br> by <a
+                                    href="https://en.wikipedia.org/wiki/Chetan_Bhagat" target="_blank">Chetan Bhagat
+                                </a></p>
+
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+
+                            </div>
+
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 150.00 </b>
+                                <h style="text-decoration: line-through;">Rs.225.00</h>
+                                <b style="color: orangered;">(33% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/book5.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">THREE MEN IN A BOAT</h5>
+                            <p class="card-text">How to Find Balance and Purpose in Your Life | Inspirational Zen book
+                                on motivation, self-development & healthy living <br> by <a
+                                    href="https://en.wikipedia.org/wiki/Jerome_K._Jerome" target="_blank"> Jerome K.
+                                    Jerome </a></p>
+
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+
+                            </div>
+
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 99.00 </b>
+                                <h style="text-decoration: line-through;">Rs.150.00</h>
+                                <b style="color: orangered;">(34% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="img/book6.jpg" class="card-img-top" alt="LIFE'S AMAZING SECRETS">
+                        <div class="card-body">
+                            <h5 class="card-title">MAHABHARAT</h5>
+                            <p class="card-text">How to Find Balance and Purpose in Your Life | Inspirational Zen book
+                                on motivation, self-development & healthy living <br> by <a
+                                    href="https://en.wikipedia.org/wiki/William_Buck_(translator)"
+                                    target="_blank">William Buck </a></p>
+
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+
+                            </div>
+
+                            <a href="Sign  In.html"><i id="cart"  class="fa fa-heart"></i></a>
+                            <a href="Sign  In.html"><i class="fa fa-shopping-cart"></i></a>
+                            <br><br>
+                            <P><b>Rs. 364.00 </b>
+                                <h style="text-decoration: line-through;">Rs.499.00</h>
+                                <b style="color: orangered;">(27% OFF)</b>
+                            </P>
+
+                        </div>
+                    </div>
+                    <br>
+                </div>
+
+
+
+
+            </div>
+
+            <br>
+
+            <div class="row justify-content-center more">
+                <a href=""><button class="btn">MORE+</button></a>
+            </div>
+
+            <br><br>
+        </div>
+        <br><br>
+    </div>
+
+    <div class="requestforbook">
+
+        <div class="container">
+
+            <div class="row " align="center">
+                <div class="col">
+                    <h1 style="color: white;">REQUEST FOR A BOOK</h1><br>
+                    <p>Request for a book which you really want but you didn't find on our site...</p>
+
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Name of Book" aria-label="Search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Name of Author" aria-label="Search">
+
+                    <a href="Sign  In.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send Request</button></a>
+                </form>
+            </div>
+
+            <br><br>
+
+
+
+
+        </div>
+
+        <br><br><br>
+
+    </div>
+
+
+
+
+    <div class="other">
+
+        <div class="container">
+            <div class="row">
+                <div class=" col-lg-6 col-md-12 offensive-md-12   FAQ">
+                    <div class="row justify-content-center" align="center">
+                        <h1 style="color: white;">DO YOU HAVE A QUESTION?</h1>
+                    </div>
+                    <br>
+                    <form>
+                        <div class="row justify-content-center">
+                            <input class="btn" type="text" placeholder="Question" id="Question"><br>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <input class="btn" type="text" placeholder="Name" id="Question"><br>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <input class="btn" type="number" placeholder="Mobile Number" id="Question"><br>
+                        </div>
+                        <br>
+                        <div class="row justify-content-center">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ask</button>
+                        </div>
+                    </form>
+
+                    <br>
+                    <br><br>
+                </div>
+                <div class=" col-lg-6 col-md-12  offensive-md-12 connect">
+                    <div class="row justify-content-center" align="center">
+                        <h1 style="color: white;">CONNECT WITH US</h1>
+                    </div>
+                    <br>
+                    <div class="row justify-content-center social">
+                        <div class=" row button justify-content-center">
+                            <div class=" col icon">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+
+                            <div class=" col icon">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                            <div class="col icon">
+                                <a href="#"> <i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="col icon">
+                                <a href="#"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <br><br>
+
+
+
+
+                    </div>
+                    <br><br>
+                </div>
+            </div>
+
+            <br><br>
+
+            <div class="row justify-content-between">
+
+                <!-- <div class="row justify-content-center">
+                    <h1 style="color: white;">LINKS</h1>
+                </div>
+                <br>
+                <div class="row justify-content-center">
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us </a>
+                            </li>
+        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us </a>
+                            </li>
+        
+                           
+        
+                        </ul>
+                    </nav>
+        
+                    <br>
+                </div> -->
+
+
+                <div class="col links">
+                    <div class="row justify-content-center">
+                        <h1 style="color: white;">LINKS</h1>
+                    </div>
+                    <br>
+
+                    <div class="row justify-content-center">
+                        <nav>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact Us </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Downlode App </a>
+                                </li>
+
+
+
+                            </ul>
+                        </nav>
+
+
+                    </div>
+
+                    <br><br> <br><br>
+
+                    <div class="row  " align="right">
+
+                        <div class="col">
+                            <i class="fas fa-arrow-up attop" id="attop"></i>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        // this is javascript foe adding behavior to our webpage
+
+        // this is for changing flag and contact info according to contry
+
+        function btn() { // aldready declared this function 'btn()' in country dropdown option in onclick 
+            var pr = document.getElementById('pr'); //declearing a variable for countries
+            var contactno = document.getElementById('contactno'); //declearing a variable for countries
+
+
+            var images = ['img/uae.png', 'img/usa.png', 'img/india.png',
+                'img/canada.png'
+            ]; //array for images of all countries
+            pr.src = images[2]; //for displaying indian flag for india
+
+            contactno.innerHTML = "+911234567890"; //contact no for india
+
+        }
+
+
+
+        function btn1() { // aldready declared this function 'btn1()' in country dropdown option in onclick 
+            var pr = document.getElementById('pr'); //declearing a variable for countries
+            var contactno = document.getElementById('contactno'); //declearing a variable for countries
+
+            var images = ['img/uae.png', 'img/usa.png', 'img/india.png',
+                'img/canada.png'
+            ]; //array for images of all countries
+
+            pr.src = images[1];
+            contactno.innerHTML = "+19876543210"; //contact no for USA
+
+        }
+
+        function btn2() { // aldready declared this function 'btn2()' in country dropdown option in onclick 
+            var pr = document.getElementById('pr'); //declearing a variable for countries
+            var contactno = document.getElementById('contactno'); //declearing a variable for countries
+
+            var images = ['img/uae.png', 'img/usa.png', 'img/india.png',
+                'img/canada.png'
+            ]; //array for images of all countries
+
+            pr.src = images[0];
+            contactno.innerHTML = " +9715555555555"; //contact no for UAE
+
+        }
+
+        function btn3() { // aldready declared this function 'btn3()' in country dropdown option in onclick 
+            var pr = document.getElementById('pr'); //declearing a variable for countries
+            var contactno = document.getElementById('contactno'); //declearing a variable for countries
+
+            var images = ['img/uae.png', 'img/usa.png', 'img/india.png',
+                'img/canada.png'
+            ]; //array for images of all countries
+
+            pr.src = images[3];
+            contactno.innerHTML = " +15555555555"; //contact no for CANADA
+
+        }
+
+
+        window.addEventListener("scroll", function () {
+
+            var navbar = document.getElementById("pages"); //declearing variable for navbbar
+            var top = window.pageYOffset || document.documentElement.scrollTop;
+            var attop = document.getElementById("attop"); //declearing variable for scrolltotop button
+
+            scrolled = () => { //function for scrolling at top
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            if (window.pageYOffset >= 50) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+
+            if (window.pageYOffset >= 500) {
+
+                attop.addEventListener('click', scrolled);
+            } else {
+
+                attop.removeEventListener("click", scrolled);
+            }
+        })
+
+
+        
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
