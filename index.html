@@ -8,7 +8,7 @@
     <title>BookOnDoor</title>
 
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
-
+    <link rel="stylesheet" href="css/style.css">
 
 
     <link rel="icon" type="image/png" href="img/flavicon2.jpg">
@@ -28,362 +28,7 @@
     </script>
 
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lora&family=Merriweather:wght@900&family=Moon+Dance&family=Readex+Pro:wght@300&family=Roboto:wght@300;400&family=The+Nautigal:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lora&family=Merriweather:wght@900&family=Moon+Dance&family=Readex+Pro:wght@300&family=Roboto+Slab:wght@500&family=Roboto:wght@300;400&family=The+Nautigal:wght@700&display=swap');
-
-        * {
-            font-family: 'Roboto', sans-serif;
-
-        }
-
-        .pages .navbar-brand {
-            font-family: 'Roboto Slab', serif;
-        }
-
-        .popular h1 {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        .requestforbook h1 {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        .other .FAQ h1 {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        .other .connect h1 {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        .other .links h1 {
-            font-family: 'Roboto Slab', serif;
-
-        }
-
-        nav {
-            width: 100%;
-            background-color: none;
-        }
-
-        nav .navbar-brand {
-            color: white;
-            font-size: 40px;
-            font-weight: 500;
-        }
-
-        nav a {
-            color: white;
-        }
-
-        .offerimg {
-            padding-left: 25%;
-        }
-
-        .offer {
-            color: white;
-            padding-top: 20%;
-
-        }
-
-        .offers p {
-            color: white;
-        }
-
-        .offers .zero {
-            font-size: 25px;
-            font-weight: 500;
-        }
-
-        .offer .pt1 {
-            font-size: 60px;
-            font-weight: 600;
-        }
-
-        .offer .pt2 {
-            font-size: 60px;
-            font-weight: 600;
-        }
-
-        .popular .card i {
-            border-radius: 100px;
-           
-
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            border: 1px solid black;
-            color: black;
-            font-size: 19px;
-            cursor: pointer;
-        }
-
-        .popular .card .stars i {
-            color: #FDCC0D;
-            border: hidden;
-            height: 50px;
-            width: 20px;
-
-        }
-
-        .popular .card .fa-heart {
-            color: #e31b23;
-            transition: 0.2s;
-        }
-
-        .popular .card .fa-heart:hover {
-            color: white;
-            background-color: #e31b23;
-        }
-
-        .popular .card .fa-shopping-cart {
-            color: rgb(240, 197, 56);
-            transition: 0.2s;
-        }
-
-        .popular .card .fa-shopping-cart:hover {
-            color: white;
-            background-color: rgb(240, 197, 56);
-        }
-
-        .requestforbook h6 {
-            color: white;
-        }
-
-        .requestforbook p {
-            color: white;
-        }
-
-        .social i {
-            /* color: white;
-            border: 0.2px solid white;
-            border-radius: 10px;
-            height: 50px;
-            width: 50px;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px; */
-
-
-            border-radius: 100px;
-            /* border: 0.5px solid black; */
-
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            border-radius: 50%;
-            /* border: 1px solid black; */
-            color: black;
-            font-size: 25px;
-            cursor: pointer;
-        }
-
-
-        .social .fa-facebook-f {
-            border: hidden;
-            background-color: white;
-            color: black;
-            transition: 0.2s;
-            -webkit-box-shadow: 0px 0px 20px rgb(68, 68, 247);
-            -moz-box-shadow: 0px 0px 20px rgb(68, 68, 247);
-            box-shadow: 0px 0px 20px rgb(68, 68, 247);
-        }
-
-        .social .fa-facebook-f:hover {
-            background-color: rgb(68, 68, 247);
-            font-size: 30px;
-            color: white;
-
-        }
-
-
-        .social .fa-twitter {
-            border: hidden;
-            background-color: white;
-            color: black;
-            transition: 0.2s;
-            -webkit-box-shadow: 0px 0px 20px rgb(113, 190, 241);
-            -moz-box-shadow: 0px 0px 20px rgb(113, 190, 241);
-            box-shadow: 0px 0px 20px rgb(113, 190, 241);
-        }
-
-        .social .fa-twitter:hover {
-            background-color: rgb(113, 190, 241);
-            font-size: 30px;
-            color: white;
-
-        }
-
-
-
-
-        .social .fa-instagram {
-            border: hidden;
-            background-color: white;
-            color: black;
-            transition: 0.2s;
-            -webkit-box-shadow: 0px 0px 20px rgb(182, 63, 83);
-            -moz-box-shadow: 0px 0px 20px rgb(182, 63, 83);
-            box-shadow: 0px 0px 20px rgb(182, 63, 83);
-
-
-
-        }
-
-        .social .fa-instagram:hover {
-            font-size: 30px;
-            background-color: rgb(182, 63, 83);
-            color: white;
-        }
-
-        .social .fa-youtube {
-            border: hidden;
-            background-color: white;
-            color: black;
-            transition: 0.2s;
-            -webkit-box-shadow: 0px 0px 20px rgb(230, 36, 36);
-            -moz-box-shadow: 0px 0px 20px rgb(230, 36, 36);
-            box-shadow: 0px 0px 20px rgb(230, 36, 36);
-        }
-
-        .social .fa-youtube:hover {
-            font-size: 30px;
-
-            color: white;
-            background-color: rgb(230, 36, 36);
-        }
-
-
-        .other .links a {
-            color: white;
-            transition: 0.5s;
-
-
-        }
-
-        .other .links a:hover {
-            color: brown;
-            margin-top: -10%;
-        }
-
-
-
-        .other .FAQ input {
-            background-color: transparent;
-            border: hidden;
-            border-bottom: 1px solid white;
-            width: 50%;
-            color: white;
-        }
-
-        .other .FAQ button {
-            background-color: transparent;
-            border: 00.5px solid palevioletred;
-            color: white;
-
-        }
-
-        .other .FAQ button:hover {
-            -webkit-box-shadow: 0px 0px 20px palevioletred;
-            -moz-box-shadow: 0px 0px 20px palevioletred;
-            box-shadow: 0px 0px 20px palevioletred;
-        }
-
-
-        .popular .more button {
-            background-color: transparent;
-            border: 00.5px solid palevioletred;
-            color: white;
-        }
-
-        .popular .more button:hover {
-            -webkit-box-shadow: 0px 0px 20px palevioletred;
-            -moz-box-shadow: 0px 0px 20px palevioletred;
-            box-shadow: 0px 0px 20px palevioletred;
-        }
-
-
-        .mr-auto {
-            margin-left: 20%;
-        }
-
-        .mr-auto button {
-            background-color: transparent;
-            color: white;
-            border: hidden;
-            transition: 0.2s;
-        }
-
-        .mr-auto button:hover {
-            background-color: transparent;
-            color: gray;
-            border: hidden;
-
-        }
-
-        .collapse .signin button {
-            background-color: transparent;
-            border: hidden;
-            color: white;
-
-
-        }
-
-        .collapse .signin button:hover {
-            color: brown;
-        }
-
-        .collapse .dropdown a:hover {
-            color: brown;
-        }
-
-        .collapse .dropdown-toggle {
-            color: white;
-            background-color: transparent;
-            text-decoration: none;
-            border: hidden;
-        }
-
-        .collapse .dropdown-toggle:hover {
-            color: brown;
-        }
-
-
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-
-            background: url("data:image/jpeg;base64,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");
-
-        }
-
-        .navbar .navbar-toggler span {
-            color: white;
-        }
-
-        .navbar .navbar-toggler span:hover {
-            color: brown;
-        }
-
-
-        .attop {
-            font-size: 25px;
-            color: yellowgreen;
-            cursor: pointer;
-
-        }
-    </style>
-
+  
 </head>
 
 <body
@@ -469,7 +114,7 @@
             </div>
 
             <div class="col">
-                <h2 class="offer"> <b class="pt1">BOOK</b> YOU NEED <br> AT <br> <b class="pt2">PRICE</b> WHICH YOU WANT
+                <h2 class="offer"> <b class="pt1">BOOK</b> YOU NEED <br> AT <br> <b class="pt2">PRICE</b>  YOU WANT
                 </h2> <br>
                 <p>We have thousands of book at perfect prizes with <b class="zero">Rs. 0 </b> dilivery charges and also
                     have some excited and LIMITED offers </p><br>
@@ -717,11 +362,12 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Name of Book" aria-label="Search">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Name of Author" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" align="center">
+                    <input class="form-control mr-sm-2 col-12 col-sm-12 col-md-12 col-lg-4" type="text" placeholder="Name of Book" aria-label="Search" required>
+                    <input class="form-control mr-sm-2 col-12 col-sm-12 col-md-12 col-lg-4 " type="text" placeholder="Name of Author" aria-label="Search" required>
 
-                    <a href="Sign  In.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send Request</button></a>
+                    <!-- <a href="Sign  In.html" class="col col-12-sm-12 col-md-12 col-lg-4"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Send Request</button></a> -->
+                    <input type="submit" class="btn" value="Send Request">
                 </form>
             </div>
 
@@ -792,8 +438,6 @@
                         </div>
 
                         <br><br>
-
-
 
 
                     </div>
